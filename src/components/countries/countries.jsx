@@ -1,11 +1,14 @@
 import { use } from "react"
+import Country from "./Country/Country"
 
-const Countries = ({countriesPromise}) =>{
+const Countries = ({ countriesPromise }) => {
     const countriesData = use(countriesPromise)
-    console.log(countriesData)
-    return(
+    return (
         <div>
             <h3>This is a country of length {countriesData.length}</h3>
+            {
+                countriesData.map(country => (<Country country={country}></Country>))
+            }
         </div>
     )
 }

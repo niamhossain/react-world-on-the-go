@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Country = () => {
+const Country = ({country}) => {
+    console.log(country)
     return (
         <div>
-            <p>country--</p>
+            <h4> Name: {country.name.official}</h4>
         </div>
     );
 };
