@@ -4,3 +4,9 @@
     margin: 20px;
     padding: 20px;
 }
+.countryVisited{
+    background-color: rgb(61, 45, 25);
+}
+.countryNotVisited{
+    background-color: rgb(0, 0, 0);
+}
