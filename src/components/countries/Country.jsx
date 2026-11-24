@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Country.css';
-const Country = ({ country }) => {
+const Country = ({ country, countriesCount}) => {
     const [visit, setVisit] = useState(false);
     const handleVisit = () => {
         setVisit(!visit);
+        countriesCount(country.name.common, visit);
     }
     return (
         <div className={`countryStyle ${visit ? 'countryVisited' : 'countryNotVisited'}`}>
