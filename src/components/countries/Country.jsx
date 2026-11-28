@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Country.css';
 const Country = ({ country, countriesCount, handleVisitedCountries}) => {
     const [visit, setVisit] = useState(false);
