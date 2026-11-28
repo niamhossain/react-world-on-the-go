@@ -6,7 +6,7 @@ const Countries = ({ countriesPromise }) => {
     const countriesData = use(countriesPromise)
     const [visitedCountries, setVisitedCountries] = useState([]);
     const [visitedCountryFlags, setVisitedCountryFlags] = useState([]);
-    const countriesCount = (country, visit) => {
+    const countriesCount = (country) => {
         console.log('countries count clicked ', country)
         visitedCountries.push(country);
         const newVisitedCountries = [...visitedCountries];
