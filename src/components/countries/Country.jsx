@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Country.css';
-const Country = ({ country, countriesCount}) => {
+const Country = ({ country, countriesCount, handleVisitedCountries}) => {
     const [visit, setVisit] = useState(false);
     const handleVisit = () => {
+        countriesCount(country, visit);
         setVisit(!visit);
-        countriesCount(country.name.common, visit);
     }
     return (
         <div className={`countryStyle ${visit ? 'countryVisited' : 'countryNotVisited'}`}>
@@ -14,6 +14,7 @@ const Country = ({ country, countriesCount}) => {
             <button onClick={handleVisit}>{
                 visit ? 'Visited' : 'Not Visited'
                 }</button>
+                <button onClick={() => {handleVisitedCountries(country)}}>Add Flag</button>
         </div>
     );
 };
